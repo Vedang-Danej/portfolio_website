@@ -1,0 +1,399 @@
+@import "config";
+@import "utilities";
+@import "item_grid";
+// general styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $body-font;
+  line-height: 1.6;
+  color: #fff;
+}
+a {
+  text-decoration: none;
+  color: $dark-color;
+}
+ul {
+  list-style: none;
+}
+
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+}
+// logo
+.logo {
+  font-family: $logo-font;
+  font-size: 2.5rem;
+}
+
+// navbar
+#main-nav {
+  margin-top: 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding: 1rem 1.5rem;
+    text-transform: uppercase;
+  }
+  a {
+    color: #fff;
+    padding-bottom: 0.5rem;
+    // transparent is a color not a border type
+    border-bottom: 3px transparent solid;
+    transition: border-color 0.5s;
+    &:hover {
+      border-color: $medium-color;
+    }
+    &.current {
+      border-color: $main-color;
+    }
+  }
+}
+#header {
+  &-home {
+    background: $bg-image no-repeat center center/cover;
+    height: 100vh;
+
+    .header-content {
+      text-align: center;
+      padding-top: 20%;
+
+      .txt-type {
+        color: $main-color;
+      }
+      h1 {
+        font-size: 4rem;
+        line-height: 1.6;
+      }
+    }
+    .btn-home {
+      background: transparent;
+      border: 2px solid $dark-color;
+      color: #fff;
+      font-weight: 450;
+      margin-bottom: 10px;
+
+      &:hover {
+        background: $main-color;
+        color: $dark-color;
+        border-color: transparent;
+        border-radius: 10px;
+        font-weight: 450;
+        transform: scale(1.1);
+      }
+    }
+    .name-span {
+      color: $light-color;
+    }
+  }
+  &-inner {
+    background: $bg-image no-repeat 80% 75% / cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $main-color;
+  }
+}
+
+#home {
+  &-a {
+    color: black;
+
+    .specials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      padding-top: 3rem;
+      grid-gap: 1rem;
+
+      .fas {
+        color: $main-color;
+        animation: animate1 2s infinite;
+      }
+    }
+  }
+
+  &-b {
+    color: black;
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        line-height: 2;
+      }
+
+      .stats-title {
+        font-size: 1.5rem;
+      }
+      .stats-number {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+      div {
+        padding: 3rem 0;
+        transition: all 0.5s;
+        &:nth-child(odd) {
+          background-color: $light-color;
+        }
+        &:nth-child(even) {
+          background-color: $medium-color;
+        }
+        &:nth-child(odd):hover {
+          background-color: #b3b3ff;
+        }
+        &:nth-child(even):hover {
+          background-color: #ffbf80;
+        }
+      }
+    }
+  }
+  &-c {
+    color: black;
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1.5rem;
+
+      &-icon {
+        position: relative;
+        padding: 2rem;
+        background: $dark-color;
+        color: white;
+        border-radius: 50%;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        transition: all 1s;
+        &:hover {
+          height: 90px;
+          width: 90px;
+          line-height: 90px;
+          background-color: $main-color;
+
+          .process-step {
+            background-color: $dark-color;
+          }
+        }
+      }
+      &-step {
+        position: absolute;
+        top: 0;
+        right: 0;
+        text-align: center;
+        font-size: 28px;
+        padding: 1rem;
+        height: 15px;
+        width: 15px;
+        line-height: 15px;
+        color: white;
+        background: $main-color;
+        border-radius: 50%;
+        transition: all 1s;
+      }
+    }
+  }
+}
+// font color animation
+@keyframes animate1 {
+  to {
+    color: $medium-color;
+  }
+}
+
+// about
+
+#about {
+  &-a {
+    color: black;
+    .about-info {
+      display: grid;
+      grid-template-areas:
+        "bioimage bio bio"
+        "aw1 aw2 aw3";
+      grid-gap: 1.2rem;
+
+      .bio-image {
+        grid-area: bioimage;
+      }
+      .bio {
+        grid-area: bio;
+        border-left: 3px solid $medium-color;
+        padding: 3.5rem;
+      }
+      .award-1 {
+        grid-area: aw1;
+      }
+      .award-2 {
+        grid-area: aw2;
+      }
+      .award-3 {
+        grid-area: aw3;
+      }
+      .award-1 .fas,
+      .award-2 .fas,
+      .award-3 .fas {
+        color: $main-color;
+        margin: 1rem;
+      }
+    }
+  }
+  &-b {
+    .progress {
+      height: 20px;
+      overflow: hidden;
+      width: 100%;
+      background-color: #ccc;
+      border-radius: 5px;
+      margin-bottom: 0.6rem;
+      div {
+        background-color: $medium-color;
+        height: 100%;
+      }
+    }
+  }
+  &-c {
+    background: #ccc;
+    .about-logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+
+      img {
+        width: 70%;
+      }
+    }
+  }
+  &-d {
+    color: black;
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 1rem;
+
+      p {
+        border: 1px solid $dark-color;
+        border-radius: 5px;
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        display: flex;
+        align-items: center;
+      }
+
+      img {
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+#work {
+  &-a {
+    color: black;
+  }
+}
+
+#contact {
+  &-a {
+    color: black;
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        "name subject"
+        "phone email "
+        "message message";
+      grid-gap: 1.2rem;
+      padding-bottom: 1.2rem;
+
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[class="btn-dark"] {
+      width: 50%;
+    }
+  }
+
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  &-c {
+    transition: background 0.5s;
+    &:hover {
+      background: $light-color;
+      color: $main-color;
+    }
+    h1 {
+      font-size: 4rem;
+      text-align: center;
+      transition: font-size 0.5sec;
+    }
+  }
+}
+
+// footer
+#main-footer {
+  color: white;
+  background-color: $dark-color;
+  height: 5rem;
+  .footer-content {
+    display: flex;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .social .fab {
+      padding: 0.5rem;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      margin-right: 1rem;
+      height: 20px;
+      width: 20px;
+      line-height: 20px;
+      text-align: center;
+      &:hover {
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+@import "media";
