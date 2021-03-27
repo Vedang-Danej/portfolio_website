@@ -326,7 +326,8 @@ img {
   color: black; }
   #about-a .about-info {
     display: grid;
-    grid-template-areas: "bioimage bio bio" "aw1 aw2 aw3";
+    grid-template-areas: "bioimage bio bio"
+ "aw1 aw2 aw3";
     grid-gap: 1.2rem; }
     #about-a .about-info .bio-image {
       grid-area: bioimage; }
@@ -393,7 +394,9 @@ img {
   color: black; }
   #contact-a .text-fields {
     display: grid;
-    grid-template-areas: "name subject" "phone email " "message message";
+    grid-template-areas: "name subject"
+ "phone email "
+ "message message";
     grid-gap: 1.2rem;
     padding-bottom: 1.2rem; }
     #contact-a .text-fields .name-input {
@@ -491,11 +494,19 @@ img {
       #main-footer .footer-content .social {
         padding-left: 1.5rem; }
   #about-a .about-info {
-    grid-template-areas: "bioimage" "bio" "aw1" "aw2" "aw3"; }
+    grid-template-areas: "bioimage"
+ "bio"
+ "aw1"
+ "aw2"
+ "aw3"; }
   #about-c {
     display: none; }
   #contact-a .text-fields {
-    grid-template-areas: "name" "subject" "phone" "email" "message"; }
+    grid-template-areas: "name"
+ "subject"
+ "phone"
+ "email"
+ "message"; }
     #contact-a .text-fields .text-input {
       margin-bottom: 0.2rem; }
   #contact-b .contact-info div {
@@ -520,3 +531,8 @@ img {
     #header-home .header-content .lead {
       margin-bottom: 1rem;
       font-size: 1.3rem; } }
+ 
+      .captcha{
+        display: block;
+        margin: auto;
+      }
