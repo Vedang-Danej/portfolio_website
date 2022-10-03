@@ -234,7 +234,11 @@ img {
         height: fit-content;
         grid-area: bio;
         border-left: 3px solid $medium-color;
-        padding: 3.5rem;
+        padding: 3.5rem 2rem;
+        text-align: left;
+      }
+      .bio h4 {
+        text-align: center;
       }
       .award-1 {
         grid-area: aw1;
