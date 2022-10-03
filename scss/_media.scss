@@ -15,6 +15,31 @@
       }
     }
   }
+
+  .specials i {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 1140px) {
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          'bioimage'
+          'bio'
+          'aw1'
+          'aw2'
+          'aw3';
+      }
+    }
+    &-c {
+      display: none;
+    }
+  }
+  .about-info img {
+    max-width: 20rem;
+    margin: auto;
+  }
 }
 @media (max-width: 500px) {
   #main-nav {
@@ -23,8 +48,6 @@
   }
 
   #header {
-    &-home {
-    }
     &-inner {
       height: 10rem;
     }
@@ -70,11 +93,11 @@
     &-a {
       .about-info {
         grid-template-areas:
-          "bioimage"
-          "bio"
-          "aw1"
-          "aw2"
-          "aw3";
+          'bioimage'
+          'bio'
+          'aw1'
+          'aw2'
+          'aw3';
       }
     }
     &-c {
@@ -86,11 +109,11 @@
     &-a {
       .text-fields {
         grid-template-areas:
-          "name"
-          "subject"
-          "phone"
-          "email"
-          "message";
+          'name'
+          'subject'
+          'phone'
+          'email'
+          'message';
         .text-input {
           margin-bottom: 0.2rem;
         }
